@@ -1,0 +1,152 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923376909066.1363492627301"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.923376909066.343249372871"
+              }
+            }
+          ],
+          "name": "GetBirthdayIntent",
+          "delegationStrategy": "ALWAYS",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month",
+              "samples": [
+                "is it {month}",
+                "It\u0027s {month}",
+                "I think {month}",
+                "Uhh {month}",
+                "They were born on {month}",
+                "{month}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "is it {year}",
+                "It\u0027s {year}",
+                "Uhh {year}",
+                "I\u0027m pretty sure it\u0027s {year}",
+                "I think {year}",
+                "{year}"
+              ]
+            }
+          ],
+          "name": "GetBirthdayIntent",
+          "samples": [
+            "i guess the month is {month} and the year is {year}",
+            "i guess {month} {year}",
+            "probably {year}",
+            "probably {month}",
+            "probably {month} {year}",
+            "it could be {year}",
+            "it could be {month}",
+            "It could be {month} {year}",
+            "maybe {year}",
+            "maybe {month}",
+            "i think {year}",
+            "i think {month}",
+            "is it {year}",
+            "is it {month}",
+            "is it {month} {year}",
+            "Maybe {month} {year}",
+            "Maybe {year} {month}",
+            "{year}",
+            "{month}",
+            "Okay I know it was {year} but the month maybe {month}",
+            "I\u0027m guessing {year} and maybe {month}",
+            "Oh she was born in {month} of {year}",
+            "{month} {year}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "cake game"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thanks. What month were they born?"
+          }
+        ],
+        "id": "Elicit.Slot.923376909066.1363492627301"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Thanks. What year were they born?"
+          }
+        ],
+        "id": "Elicit.Slot.923376909066.343249372871"
+      }
+    ]
+  }
+}
